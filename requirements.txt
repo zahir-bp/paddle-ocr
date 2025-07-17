@@ -1,0 +1,8 @@
+flask[async]
+setuptools
+paddlepaddle
+paddleocr
+requests
+opencv-python-headless
+asyncio
+typing

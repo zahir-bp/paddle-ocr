@@ -95,13 +95,13 @@ def match_total(text: str) -> Dict[str, object]:
 def get_trx_details(text: str) -> Dict[str, object]:
     matched_date = match_date_format(text)
     matched_time = validate_time(text)
-    matched_fuel = match_petrol(text)
+    # matched_fuel = match_petrol(text)
     total_info = match_total(text)
 
     return {
         "date": matched_date[0][0] if matched_date else "",
         "time": ":".join([x for x in matched_time[0] if x]) if matched_time else "",
-        "fuelType": matched_fuel,
+        "fuelType": "",
         "amount": total_info["total"],
         "total": total_info["amount"],
     }
